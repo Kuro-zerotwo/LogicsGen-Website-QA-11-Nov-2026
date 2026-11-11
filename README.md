@@ -1,118 +1,138 @@
 # LogicsGen-Website-QA-11-Nov-2026
-# LogicsGen Website – Manual QA Testing Project
+# LogicsGen Website – Manual QA Testing
 
-**Project Date:** November 2026  
-**Project Type:** Individual QA Portfolio Project  
-**Testing Approach:** Manual UI Testing  
-**Application Under Test:** [Tricentis Demo Web Shop](https://demowebshop.tricentis.com/)
+A manual software testing project documenting functional testing, form validation, navigation, responsive checks, defect reporting, and Lighthouse auditing of the LogicsGen website.
 
-## 1. Project Overview
+## Project Overview
 
-This project demonstrates manual software testing of the Tricentis Demo Web Shop, an e-commerce practice application.
+This project involved testing the LogicsGen website to evaluate its main user journeys, identify functional issues, verify form behavior, and check selected responsive layouts.
 
-The purpose of this project was to understand the application's functionality, identify potential issues, verify important user workflows, and document testing results using standard QA practices.
+The testing was performed manually using desktop Chrome, a physical Redmi 13 mobile phone, and Chrome DevTools responsive emulation.
 
-The project was independently planned, designed, executed and documented as a QA portfolio project.
+**Website:** https://logicsgen.com/
 
-## 2. Testing Scope
+**Testing Date:** 11 November 2026
 
-The following application areas were covered:
+## Objectives
 
-- User Registration and Login
-- Homepage and Navigation
-- Search and Advanced Search
-- Product Categories and Product Details
-- Configurable Products
-- Wishlist and Product Comparison
-- Shopping Cart and Quantity Validation
-- Guest and Registered Customer Checkout
-- Order Confirmation
-- Digital Downloads and Gift Cards
-- Email a Friend and Newsletter
-- Community Poll and Recently Viewed Products
-- Responsive Viewport Exploration
+- Verify website navigation and page functionality.
+- Test contact and course enquiry forms.
+- Validate required fields and invalid inputs.
+- Check selected responsive layouts.
+- Identify, document, and classify defects.
+- Capture screenshots as defect evidence.
+- Evaluate the homepage using Google Lighthouse.
 
-Testing covered all seven product categories: Books, Computers, Electronics, Apparel & Shoes, Digital Downloads, Jewelry and Gift Cards.
+## Testing Environment
 
-## 3. Testing Approach
-
-Manual testing was performed through the application UI using:
-
-- Positive Testing
-- Negative Testing
-- Boundary Value Analysis
-- Equivalence Partitioning
-- Exploratory Testing
-- Functional and UI Testing
-
-## 4. Tools and Environment
-
-| Item | Details |
+| Environment | Details |
 |---|---|
-| Application | Tricentis Demo Web Shop |
-| Browser | Google Chrome 156.0.8078.80 (64-bit) |
-| Operating System | Windows 11, Version 26H2 |
-| Testing Type | Manual UI Testing |
-| Responsive Exploration | Chrome DevTools – iPhone 16 viewport |
-| Documentation | Microsoft Word and Excel |
-| Repository | GitHub |
+| Desktop browser | Google Chrome 156.0.8078.80 (64-bit) |
+| Physical mobile | Redmi 13 |
+| Responsive testing | Chrome DevTools – 768 × 1024 |
+| Website | https://logicsgen.com/ |
 
-## 5. Project Deliverables
+## Testing Scope
 
-The project includes the following QA documents:
+The following areas were covered:
 
-- **Test Plan** – Testing objectives, scope, approach and environment.
-- **Requirement Analysis** – Functional requirements and business rules.
-- **Test Scenarios** – High-level testing coverage.
-- **Test Cases** – Preconditions, steps, test data and expected results.
-- **Requirements Traceability Matrix (RTM)** – Mapping of requirements, scenarios and test cases.
-- **Test Execution Results** – Actual results and execution status.
-- **Bug Reports and Observations** – Potential issues, observations and testing limitations.
-- **QA Test Report** – Summary of the completed testing project.
-- **Lighthouse Report** – Recorded website audit results.
+- Homepage loading
+- Main navigation and Services dropdown
+- Courses and course categories
+- About Us and Contact Us pages
+- Blogs page and blog links
+- Contact form validation
+- Course enquiry form
+- Name, email and phone validation
+- Message character limit
+- Browser Back and Forward navigation
+- Selected tablet and mobile responsive checks
 
-## 6. Key Findings
+## Test Execution Summary
 
-During testing, the following behaviours were recorded for further review:
+- 20 manual test scenarios marked as Passed.
+- 3 findings documented separately.
+- Screenshot evidence included in the QA report.
+- Lighthouse mobile homepage audit completed.
 
-- Some products displayed an In Stock label but did not show an Add to Cart option.
-- Alphabetic characters were accepted in the checkout Phone Number field.
-- Zero and negative cart quantities caused the selected product to be removed.
-- Product image placeholders and stock-label differences were observed in the Accessories category.
-- Different search results were returned for singular and plural keywords.
+## Defects Identified
 
-These findings were documented according to the available test expectations. Behaviours with unconfirmed expected rules were not automatically classified as confirmed defects.
+| Bug ID | Description | Severity | Status |
+|---|---|---|---|
+| LG-QA-001 | Suggested course cards redirect to the same incomplete course page. | High | Open – reproduced |
+| LG-QA-002 | “Explore All Blog Posts” redirects to the Courses page instead of the Blogs page. | High | Open – reproduced |
+| LG-QA-003 | CAPTCHA could not be clicked in Chrome DevTools responsive emulation at 768 × 1024. | Low – investigate | Needs verification |
 
-## 7. Test Execution Summary
+**Note:** LG-QA-003 requires verification on a physical tablet. CAPTCHA worked in normal desktop Chrome and on the physical Redmi 13.
 
-The test execution workbook records **91 Pass results and 9 Observation results** across 100 test cases.
+## Lighthouse Audit Results
 
-Observation results were retained separately from Pass/Fail outcomes where the expected behaviour or requirement needed clarification.
+A mobile Lighthouse audit was performed on the homepage using Navigation mode and Slow 4G simulation.
 
-## 8. Project Limitations
+| Category | Score |
+|---|---:|
+| Performance | 62 |
+| Accessibility | 93 |
+| Best Practices | 77 |
+| SEO | 100 |
 
-The following activities were outside the project scope or were not fully verified:
+### Key Performance Metrics
 
-- API, database, automation and source-code testing.
-- Performance, load and stress testing.
-- Security and penetration testing.
-- Real payment gateway or card transactions.
-- Full cross-browser compatibility testing.
-- Physical mobile-device and Safari testing.
-- Email inbox delivery verification for Newsletter and Email a Friend.
+- First Contentful Paint (FCP): 2.5 s
+- Largest Contentful Paint (LCP): 3.9 s
+- Total Blocking Time (TBT): 1,000 ms
+- Speed Index: 3.7 s
+- Cumulative Layout Shift (CLS): 0
 
-Responsive exploration was performed using iPhone 16 viewport emulation in Chrome DevTools.
+These results apply to the mobile homepage audit only, not the entire website.
 
-## 9. Important Note
+## Evidence and Documentation
 
-This is an individual learning and portfolio project. Requirements and business rules were independently prepared from visible application features, observed workflows and reasonable test expectations. They are not official Tricentis specifications or stakeholder-approved requirements.
+The project includes:
 
-## 10. Project Status
+- Detailed QA Test Report
+- Test scenarios with expected and actual results
+- Defect IDs and reproduction steps
+- Severity and status classifications
+- Screenshot evidence
+- Lighthouse audit findings and recommendations
 
-**Status: Completed**
+## Limitations
 
-The project demonstrates the manual QA process from requirement analysis and test design through execution, traceability, issue documentation and reporting.
+- Actual enquiry email delivery and backend receipt were not verified.
+- CAPTCHA behavior still requires physical-tablet verification.
+- Lighthouse testing was limited to the mobile homepage.
+- Other pages, browsers and device combinations were not fully tested.
+- Automated accessibility results do not replace complete manual accessibility testing.
+
+## Recommended Next Steps
+
+1. Correct the related course-card destinations and incomplete course content.
+2. Fix the incorrect blog button destination.
+3. Verify CAPTCHA on a physical tablet.
+4. Confirm enquiry delivery through the receiving inbox or backend.
+5. Perform regression testing after fixes.
+6. Run Lighthouse audits on additional pages and desktop.
+
+## Skills Demonstrated
+
+- Manual Software Testing
+- Functional Testing
+- UI Testing
+- Form Validation Testing
+- Boundary Value Testing
+- Responsive Testing
+- Navigation Testing
+- Bug Reporting and Documentation
+- Severity and Priority Assessment
+- Screenshot Evidence Collection
+- Chrome DevTools
+- Google Lighthouse
+
+## Project Deliverable
+
+The complete **LogicsGen Website QA Test Report** contains the detailed test cases, findings, screenshots, Lighthouse results, and recommended next actions.
 
 ---
 
-*Created as an individual QA portfolio project to demonstrate foundational manual software testing skills.*
+*This project demonstrates practical manual QA testing and defect documentation. Findings and test results are limited to the environments and scenarios recorded in the report.*
