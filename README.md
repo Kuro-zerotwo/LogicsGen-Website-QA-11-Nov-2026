@@ -2,12 +2,12 @@
 
 **Project Date:** 11 November 2026  
 **Project Type:** Individual QA Portfolio Project  
-**Testing Approach:** Manual Functional and Responsive Testing  
+**Testing Approach:** Manual Functional, UI and Responsive Testing  
 **Website:** [https://logicsgen.com/](https://logicsgen.com/)
 
 ## 1. Project Overview
 
-This project involved manual testing of the LogicsGen website to check its main pages, navigation, forms, input validation, user interactions and responsive behaviour.
+This project involved manual testing of the LogicsGen website to check its main pages, navigation, forms, input validation, user interactions, UI consistency and responsive behaviour.
 
 The objective was to verify important website functions, identify issues, document actual results and evaluate selected website quality metrics using Google Lighthouse.
 
@@ -30,6 +30,12 @@ The following areas were tested:
 - Browser Back and Forward navigation
 - Mobile menu and responsive layout
 - CAPTCHA interaction in responsive emulation
+- Text alignment and spacing
+- Image loading and cropping on the other pages checked
+- Button visual consistency
+- Mobile chat-widget overlap
+
+**Note:** Missing images on `/course/testing` remain documented separately as LG-QA-001.
 
 ## 3. Testing Approach
 
@@ -41,6 +47,7 @@ The project used the following manual testing techniques:
 - Form Validation Testing
 - Boundary Value Testing
 - Navigation Testing
+- UI Consistency Testing
 - Responsive UI Testing
 - Exploratory Testing
 
@@ -59,7 +66,7 @@ The project used the following manual testing techniques:
 
 ## 5. Test Execution Summary
 
-A total of **20 manual test scenarios** were recorded as Passed in the tested environments.
+A total of **24 manual test scenarios** were recorded as Passed in the tested environments.
 
 Three additional findings were documented separately:
 
@@ -67,9 +74,11 @@ Three additional findings were documented separately:
 |---|---|---|---|
 | LG-QA-001 | Suggested course cards lead to the same incomplete course page. | High | Open – Reproduced |
 | LG-QA-002 | Explore All Blog Posts button redirects to the Courses page instead of the Blogs page. | High | Open – Reproduced |
-| LG-QA-003 | CAPTCHA could not be clicked in Chrome DevTools responsive emulation at 768 × 1024. | Low | Needs verification |
+| LG-QA-003 | CAPTCHA could not be clicked in Chrome DevTools responsive emulation at 768 × 1024. | Low – Investigate | Needs verification |
 
 The CAPTCHA behaviour was observed in responsive emulation but worked in normal desktop Chrome and on the physical Redmi 13. Physical tablet verification is still required.
+
+The four additional UI checks covered text alignment and spacing, image loading and cropping on the other pages checked, button consistency and mobile chat-widget overlap.
 
 ## 6. Lighthouse Audit Results
 
@@ -95,7 +104,7 @@ This was a mobile audit of the homepage only, not a full website audit.
 
 The repository contains the following project reports:
 
-- **QA Test Report:** Manual testing scope, test results, findings, evidence and recommendations.
+- **QA Test Report:** Manual testing scope, 24 test scenarios, findings, screenshot evidence and recommendations.
 - **Lighthouse Report:** Mobile homepage audit scores, performance metrics and audit findings.
 
 ## 8. Project Limitations
@@ -111,6 +120,8 @@ The following areas were not fully verified:
 
 Successful form notifications were observed, but they do not confirm actual email delivery or backend receipt.
 
+The image-loading and cropping check passed on the other pages checked; missing images on `/course/testing` remain documented under LG-QA-001.
+
 ## 9. Recommendations
 
 The main recommended actions are:
@@ -121,14 +132,15 @@ The main recommended actions are:
 4. Confirm enquiry submission through the receiving inbox or backend.
 5. Improve Lighthouse performance and best-practice findings.
 6. Perform retesting after the reported issues are corrected.
+7. Perform additional manual accessibility checks, including keyboard navigation and focus visibility.
 
 ## 10. Project Status
 
 **Testing Status: Completed**
 
-The documented manual testing and Lighthouse audit were completed on 11 November 2026. Three findings remain outstanding and require correction or further verification.
+The documented manual testing and Lighthouse audit were completed on 11 November 2026. A total of 24 manual test scenarios were recorded as Passed. Three findings remain outstanding and require correction or further verification.
 
-This project demonstrates practical QA activities, including test execution, validation testing, responsive checks, defect documentation, evidence collection and reporting.
+This project demonstrates practical QA activities, including test execution, functional and UI validation, responsive checks, defect documentation, evidence collection and reporting.
 
 ---
 
