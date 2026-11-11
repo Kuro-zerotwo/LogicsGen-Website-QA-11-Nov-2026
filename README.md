@@ -1,73 +1,79 @@
-# LogicsGen-Website-QA-11-Nov-2026
-# LogicsGen Website – Manual QA Testing
+# LogicsGen Website – QA Testing Project
 
-A manual software testing project documenting functional testing, form validation, navigation, responsive checks, defect reporting, and Lighthouse auditing of the LogicsGen website.
+**Project Date:** 11 November 2026  
+**Project Type:** Individual QA Portfolio Project  
+**Testing Approach:** Manual Functional and Responsive Testing  
+**Website:** [https://logicsgen.com/](https://logicsgen.com/)
 
-## Project Overview
+## 1. Project Overview
 
-This project involved testing the LogicsGen website to evaluate its main user journeys, identify functional issues, verify form behavior, and check selected responsive layouts.
+This project involved manual testing of the LogicsGen website to check its main pages, navigation, forms, input validation, user interactions and responsive behaviour.
 
-The testing was performed manually using desktop Chrome, a physical Redmi 13 mobile phone, and Chrome DevTools responsive emulation.
+The objective was to verify important website functions, identify issues, document actual results and evaluate selected website quality metrics using Google Lighthouse.
 
-**Website:** https://logicsgen.com/
+Testing was performed across desktop Chrome, a physical Redmi 13 mobile phone and Chrome DevTools responsive emulation.
 
-**Testing Date:** 11 November 2026
+## 2. Testing Scope
 
-## Objectives
+The following areas were tested:
 
-- Verify website navigation and page functionality.
-- Test contact and course enquiry forms.
-- Validate required fields and invalid inputs.
-- Check selected responsive layouts.
-- Identify, document, and classify defects.
-- Capture screenshots as defect evidence.
-- Evaluate the homepage using Google Lighthouse.
-
-## Testing Environment
-
-| Environment | Details |
-|---|---|
-| Desktop browser | Google Chrome 156.0.8078.80 (64-bit) |
-| Physical mobile | Redmi 13 |
-| Responsive testing | Chrome DevTools – 768 × 1024 |
-| Website | https://logicsgen.com/ |
-
-## Testing Scope
-
-The following areas were covered:
-
-- Homepage loading
-- Main navigation and Services dropdown
-- Courses and course categories
-- About Us and Contact Us pages
-- Blogs page and blog links
-- Contact form validation
-- Course enquiry form
-- Name, email and phone validation
+- Homepage loading and navigation
+- Services dropdown and service links
+- Courses listing and category pages
+- About Us, Contact Us and Blogs pages
+- Contact form validation and submission
+- Course enquiry form validation and submission
+- Name, email and phone number validation
 - Message character limit
+- Blog Read More links
+- Course and blog navigation buttons
 - Browser Back and Forward navigation
-- Selected tablet and mobile responsive checks
+- Mobile menu and responsive layout
+- CAPTCHA interaction in responsive emulation
 
-## Test Execution Summary
+## 3. Testing Approach
 
-- 20 manual test scenarios marked as Passed.
-- 3 findings documented separately.
-- Screenshot evidence included in the QA report.
-- Lighthouse mobile homepage audit completed.
+The project used the following manual testing techniques:
 
-## Defects Identified
+- Functional Testing
+- Positive Testing
+- Negative Testing
+- Form Validation Testing
+- Boundary Value Testing
+- Navigation Testing
+- Responsive UI Testing
+- Exploratory Testing
 
-| Bug ID | Description | Severity | Status |
+## 4. Tools and Test Environment
+
+| Item | Details |
+|---|---|
+| Website | LogicsGen |
+| Browser | Google Chrome 156.0.8078.80 (64-bit) |
+| Desktop OS | Windows 11 |
+| Physical Mobile | Redmi 13 |
+| Responsive Testing | Chrome DevTools – 768 × 1024 |
+| Performance Audit | Google Lighthouse 13.5.0 |
+| Documentation | Microsoft Word and PDF |
+| Repository | GitHub |
+
+## 5. Test Execution Summary
+
+A total of **20 manual test scenarios** were recorded as Passed in the tested environments.
+
+Three additional findings were documented separately:
+
+| Finding ID | Description | Severity / Classification | Status |
 |---|---|---|---|
-| LG-QA-001 | Suggested course cards redirect to the same incomplete course page. | High | Open – reproduced |
-| LG-QA-002 | “Explore All Blog Posts” redirects to the Courses page instead of the Blogs page. | High | Open – reproduced |
-| LG-QA-003 | CAPTCHA could not be clicked in Chrome DevTools responsive emulation at 768 × 1024. | Low – investigate | Needs verification |
+| LG-QA-001 | Suggested course cards lead to the same incomplete course page. | High | Open – Reproduced |
+| LG-QA-002 | Explore All Blog Posts button redirects to the Courses page instead of the Blogs page. | High | Open – Reproduced |
+| LG-QA-003 | CAPTCHA could not be clicked in Chrome DevTools responsive emulation at 768 × 1024. | Low | Needs verification |
 
-**Note:** LG-QA-003 requires verification on a physical tablet. CAPTCHA worked in normal desktop Chrome and on the physical Redmi 13.
+The CAPTCHA behaviour was observed in responsive emulation but worked in normal desktop Chrome and on the physical Redmi 13. Physical tablet verification is still required.
 
-## Lighthouse Audit Results
+## 6. Lighthouse Audit Results
 
-A mobile Lighthouse audit was performed on the homepage using Navigation mode and Slow 4G simulation.
+A Lighthouse audit was performed on the LogicsGen homepage using Mobile Navigation mode and Slow 4G network simulation.
 
 | Category | Score |
 |---|---:|
@@ -76,63 +82,54 @@ A mobile Lighthouse audit was performed on the homepage using Navigation mode an
 | Best Practices | 77 |
 | SEO | 100 |
 
-### Key Performance Metrics
+### Key findings
 
-- First Contentful Paint (FCP): 2.5 s
-- Largest Contentful Paint (LCP): 3.9 s
-- Total Blocking Time (TBT): 1,000 ms
-- Speed Index: 3.7 s
-- Cumulative Layout Shift (CLS): 0
+- **Performance:** Opportunities to improve image delivery, JavaScript execution, unused CSS and JavaScript, and render-blocking resources.
+- **Accessibility:** Colour contrast and touch-target size or spacing need improvement.
+- **Best Practices:** One deprecated API warning and issues in the Chrome DevTools Issues panel.
+- **SEO:** The homepage received a score of 100.
 
-These results apply to the mobile homepage audit only, not the entire website.
+This was a mobile audit of the homepage only, not a full website audit.
 
-## Evidence and Documentation
+## 7. Project Deliverables
 
-The project includes:
+The repository contains the following project reports:
 
-- Detailed QA Test Report
-- Test scenarios with expected and actual results
-- Defect IDs and reproduction steps
-- Severity and status classifications
-- Screenshot evidence
-- Lighthouse audit findings and recommendations
+- **QA Test Report:** Manual testing scope, test results, findings, evidence and recommendations.
+- **Lighthouse Report:** Mobile homepage audit scores, performance metrics and audit findings.
 
-## Limitations
+## 8. Project Limitations
 
-- Actual enquiry email delivery and backend receipt were not verified.
-- CAPTCHA behavior still requires physical-tablet verification.
-- Lighthouse testing was limited to the mobile homepage.
-- Other pages, browsers and device combinations were not fully tested.
-- Automated accessibility results do not replace complete manual accessibility testing.
+The following areas were not fully verified:
 
-## Recommended Next Steps
+- Actual enquiry email delivery and backend receipt.
+- CAPTCHA behaviour on a physical tablet.
+- Lighthouse audits for other website pages.
+- A separate desktop Lighthouse audit.
+- Full cross-browser compatibility.
+- Complete website coverage across all devices and screen sizes.
 
-1. Correct the related course-card destinations and incomplete course content.
-2. Fix the incorrect blog button destination.
-3. Verify CAPTCHA on a physical tablet.
-4. Confirm enquiry delivery through the receiving inbox or backend.
-5. Perform regression testing after fixes.
-6. Run Lighthouse audits on additional pages and desktop.
+Successful form notifications were observed, but they do not confirm actual email delivery or backend receipt.
 
-## Skills Demonstrated
+## 9. Recommendations
 
-- Manual Software Testing
-- Functional Testing
-- UI Testing
-- Form Validation Testing
-- Boundary Value Testing
-- Responsive Testing
-- Navigation Testing
-- Bug Reporting and Documentation
-- Severity and Priority Assessment
-- Screenshot Evidence Collection
-- Chrome DevTools
-- Google Lighthouse
+The main recommended actions are:
 
-## Project Deliverable
+1. Correct the suggested course-card destinations and incomplete course page.
+2. Fix the Explore All Blog Posts button destination.
+3. Verify CAPTCHA on a physical tablet or another supported tablet browser.
+4. Confirm enquiry submission through the receiving inbox or backend.
+5. Improve Lighthouse performance and best-practice findings.
+6. Perform retesting after the reported issues are corrected.
 
-The complete **LogicsGen Website QA Test Report** contains the detailed test cases, findings, screenshots, Lighthouse results, and recommended next actions.
+## 10. Project Status
+
+**Testing Status: Completed**
+
+The documented manual testing and Lighthouse audit were completed on 11 November 2026. Three findings remain outstanding and require correction or further verification.
+
+This project demonstrates practical QA activities, including test execution, validation testing, responsive checks, defect documentation, evidence collection and reporting.
 
 ---
 
-*This project demonstrates practical manual QA testing and defect documentation. Findings and test results are limited to the environments and scenarios recorded in the report.*
+*Individual QA portfolio project – LogicsGen Website.*
